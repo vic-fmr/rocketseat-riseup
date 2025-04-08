@@ -1,5 +1,7 @@
 # Gerenciador de Tarefas
 
+![Logo do Projeto](./src/assets/todo-logo.png)
+
 Aplicação para o projeto 1 da trilha RiseUP, parceria da Cesar School com a Rocketseat
 
 ## Visão Geral
