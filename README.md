@@ -1,6 +1,6 @@
 # Gerenciador de Tarefas
 
-Uma aplicação simples e elegante para gerenciamento de tarefas construída com React e TypeScript.
+Aplicação para o projeto 1 da trilha RiseUP, parceria da Cesar School com a Rocketseat
 
 ## Visão Geral
 
@@ -23,7 +23,6 @@ Este projeto é um gerenciador de tarefas pessoal que permite aos usuários:
 - Interface limpa e moderna com tema escuro
 - Design responsivo que funciona em dispositivos móveis e desktop
 - Feedback visual para conclusão de tarefas
-- Tratamento de estado vazio
 
 ## Como Começar
 
