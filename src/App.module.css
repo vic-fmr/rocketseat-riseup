@@ -1,4 +1,4 @@
-main {
+main{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -9,12 +9,12 @@ main {
     overflow-y: scroll;
     scrollbar-width: none;
     padding-bottom: 20vh;
-    -ms-overflow-style: none;
+    -ms-overflow-style: none; 
 }
 main::-webkit-scrollbar {
     display: none;
 }
-header {
+header{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -24,28 +24,28 @@ header {
     background-color: var(--gray-700);
     padding-top: 4.5rem;
 }
-img {
+img{
     width: 7.875rem;
     height: 3rem;
 }
-.inputContainer {
+.inputContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5rem; 
     width: 52%;
     margin-top: 53px;
 }
-.inputContainer input {
+.inputContainer input{
     color: var(--gray-100);
     width: 39.875rem;
     height: 3.375rem;
-    background-color: var(--gray-500);
+    background-color: var(--gray-500); 
     border-radius: 8px;
     border: 1px solid var(--gray-700);
     padding: 1rem;
     font-size: 1rem;
-    outline: none;
+    outline: none; 
 }
 
 .inputContainer input:focus {
@@ -53,10 +53,10 @@ img {
     -webkit-box-shadow: 0 0 0 1px var(--purple-dark);
     box-shadow: 0 0 0 1px var(--purple-dark);
 }
-.inputContainer button {
+.inputContainer button{
     width: 5.625rem;
     height: 3.25rem;
-    background-color: var(--blue-dark);
+    background-color: var(--blue-dark); 
     color: var(--gray-100);
     border-radius: 8px;
     border: none;
@@ -70,7 +70,7 @@ img {
     padding: 2px;
 }
 
-.tasksMadeTitle {
+.tasksMadeTitle{
     color: var(--blue);
     display: flex;
     align-items: center;
@@ -78,10 +78,10 @@ img {
     width: max-content;
     font-weight: bold;
 }
-.tasksMade {
+.tasksMade{
     font-size: 0.75rem;
-    min-width: 25px;
-    padding: 2px 8px;
+    min-width: 25px; 
+    padding: 2px 8px; 
     height: 19px;
     color: var(--gray-200);
     margin-left: 0.5rem;
@@ -89,58 +89,42 @@ img {
     justify-content: center;
     align-items: center;
     background-color: var(--gray-400);
-    border-radius: 999px;
+    border-radius: 999px; 
 }
-.tasksDoAndRedo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0 10px;
-}
-.tasksDoAndRedo svg {
-    padding: 2px;
-    width: 25px;
-    height: auto;
-    border-radius: 8px;
-}
-.tasksDoAndRedo > :hover {
-    background-color: var(--gray-400);
-    cursor: pointer;
-}
-.tasksDoneTitle {
+.tasksDoneTitle{
     color: var(--purple);
     font-weight: bold;
     display: flex;
     align-items: center;
 }
-.tasksDone {
+.tasksDone{
     font-size: 0.75rem;
-    min-width: 25px;
-    padding: 2px 8px;
+    min-width: 25px; 
+    padding: 2px 8px; 
     height: 19px;
     color: var(--gray-200);
     margin-left: 0.5rem;
     background-color: var(--gray-400);
-    border-radius: 999px;
+    border-radius: 999px; 
     display: flex;
     align-items: center;
 }
-.tasks {
+.tasks{  
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     width: 52%;
 }
 
-.tasksHeader {
+.tasksHeader{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
 }
-.noTaskContainer {
+.noTaskContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     text-align: center;
     align-items: center;
     border-top: 1px solid var(--gray-400);
@@ -149,22 +133,48 @@ img {
     font-size: 1rem;
     gap: 1rem;
 }
-.noTaskContainer img {
+.noTaskContainer img{
     width: 3.5rem;
     height: 3.5rem;
 }
-.noTaskContainer > div > p {
+.noTaskContainer > div > p{
     color: var(--gray-300);
 }
 
+.undoRedoButtons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.undoRedoButtons button {
+  background-color: #262626;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.undoRedoButtons button:hover {
+  background-color: #333333;
+}
+
+
 @media (max-width: 768px) {
-    .inputContainer {
+    .inputContainer{
         width: 90%;
     }
-    .inputContainer input {
+    .inputContainer input{
         width: 100%;
     }
-    .tasks {
+    .tasks{
         width: 90%;
     }
 }

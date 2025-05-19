@@ -1,47 +1,39 @@
-import { useState } from 'react'
 import styles from './Task.module.css'
 import { Trash } from 'phosphor-react'
-import { ITask } from '../App'
+import { useDispatch } from 'react-redux'
+import { toggleTask, deleteTask } from '../redux/tasksSlice'
 
-export default function Task({
-    done,
-    task,
-    id,
-    setTasks
-}: {
-    done: boolean,
-    task: string,
-    id: number,
-    setTasks: React.Dispatch<React.SetStateAction<ITask[]>>
-}) {
+interface TaskProps {
+  id: number
+  task: string
+  done: boolean
+}
 
-    const handleCheckboxChange = () => {
-        const newDoneState = !done;
+export default function Task({ id, task, done }: TaskProps) {
+  const dispatch = useDispatch()
 
-        setTasks((prevTasks: ITask[]) =>
-            prevTasks.map(t =>
-                t.id === id ? { ...t, done: newDoneState } : t
-            )
-        );
-    }
+  const handleCheckboxChange = () => {
+    dispatch(toggleTask(id))
+  }
 
-    const handleDelete = () => {
-        setTasks((prevTasks: ITask[]) => prevTasks.filter(t => t.id !== id));
-    }
+  const handleDelete = () => {
+    dispatch(deleteTask(id))
+  }
 
-    return (
-        <div className={styles.task}>
-            <div>
-                <input
-                    type="checkbox"
-                    checked={done}
-                    onChange={handleCheckboxChange}
-                /><p>{task}</p>
-            </div>
-            <Trash
-                className={styles.trashIcon}
-                onClick={handleDelete}
-            />
-        </div>
-    )
+  return (
+    <div className={styles.task}>
+      <div>
+        <input
+          type="checkbox"
+          checked={done}
+          onChange={handleCheckboxChange}
+        />
+        <p className={done ? styles.done : ''}>{task}</p>
+      </div>
+      <Trash
+        className={styles.trashIcon}
+        onClick={handleDelete}
+      />
+    </div>
+  )
 }
